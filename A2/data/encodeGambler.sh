@@ -1,0 +1,1 @@
+python3 extras/encodeGambler.py $1

@@ -1,0 +1,34 @@
+CS 747 Assignment 3 :    
+-    Huzefa Chasmai, 15D170013	
+
+I have used a model Based Approach, which is a modification of the model based approach given in class note 1. The modifications are that like the method mentioned in the note, we are maintaining the necessary counts of the total visits, the total transitions and the total rewards for each (state, action, reward, next state) tuple accordingly. Apart from this we maintain a probability distribution that maintains the probabilities of taking action a_i for each state s. This is to handle stochastic policies. From these total counts we calculate estimates of Transition and Reward functions. Further using these estimates of Transition and Reward and the Probability distribtion estimate for the policy, we calculate the Value functions using Value iteration using the Bellman Operator for stochastic policies. 
+
+I have also tried using the TD Lambda approach implemented using the eligibility traces, which is a model free approach. But the results as seen in the given two data files and a few more experimental files suggest that the model based approach performs better.
+
+The advantage of the Model Based Approach is that it does not require tuning of the lambda parameter and works well for all possible sizes and the number of runs given as input. The disadvantage is the space complexity and the fact that it is a off policy method as opposed to the other TD Lambda approach  
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Squared Difference Error Values for the experiments on given data:
+
+-----------------------------------------------------------------
+
+For the model Based Approach
+
+for D1 :  0.013604000133075722
+for D2 :  1.7224599631232895e-05
+
+-----------------------------------------------------------------
+
+For the TD lambda Based Approach (keeping alpha as float(9 / t) )
+
+for D1 (Lambda tuned to 0.82) : 3.5832106845897167
+for D2 (Lambda tuned to 0):  2.9749952862375482e-05
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+The directory structure is as mentioned in the problem statements : 
+
+-- roll_no
+ - evaluator-modBased.py : Evaluator implemented using the model Based Approach
+ - evaluator-tdlambda.py : Evaluator implemented using the TD lambda Approach

@@ -1,0 +1,6 @@
+data :  The gambler mdp files (gamblermdp$ph.txt) and the solutions (sol_$alg$ph.txt)
+data/plots : Cumulative Plots for the Value and the Policy
+encodeGambler.py :  The code corresponding to encodeGambler
+Planner.py :  The code corresponding to planner
+Plotter.sh :  A Bash script to generate the data and the cumulative plots (doesn't work on sl2 machines since tkinter is not installed I guess)
+Plotting_script.py : Script to plot cumulative plots
